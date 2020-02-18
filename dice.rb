@@ -4,6 +4,11 @@ def view(template); erb template.to_sym; end
 before { puts "Parameters: #{params}" }  
 
 get "/" do
-  "<h1>Hello jackass</h1>"
+  
+@die1=rand (1..6)
+@die2=rand (1..6)
+view "dice"
+# total= @die1 + @die2
+
 
 end
